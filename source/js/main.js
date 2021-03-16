@@ -8,22 +8,21 @@ if (!!$.prototype.justifiedGallery) { // if justifiedGallery method is defined
 }
 
 
-$(window).load(function() {
-    
-       $("#wrapper").fadeTo("slow",1);
-       $("#blogtitel").fadeOut(2000);
+$(window).load(function () {
+    $("#wrapper").fadeTo("slow", 1);
+    $("#blogtitel").fadeOut(2000);
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
 
         var z = $(".banner")[0].getBoundingClientRect().bottom / (
             $(".banner")[0].getBoundingClientRect().bottom - $(".banner")[0].getBoundingClientRect().top)
 
         if (z < 0) {
-            z = 0.01
+            z = 0.0001
         }
 
         $(".wrapper")[0].style.zoom = z
@@ -31,7 +30,7 @@ $(document).ready(function() {
 
     });
 
-    $("#menu-icon, #menu-icon-tablet").click(function() {
+    $("#menu-icon, #menu-icon-tablet").click(function () {
         if ($('#menu').css('visibility') == 'hidden') {
             $('#menu').css('visibility', 'visible');
             $('#menu-icon, #menu-icon-tablet').addClass('active');
@@ -49,12 +48,12 @@ $(document).ready(function() {
     });
 
     /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-    $("#header > #nav > ul > .icon").click(function() {
+    $("#header > #nav > ul > .icon").click(function () {
         $("#header > #nav > ul").toggleClass("responsive");
     });
 
     if ($("#menu").length) {
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             var topDistance = $(window).scrollTop();
 
             if ($('#menu').css('visibility') != 'hidden' && topDistance < 10) {
@@ -77,7 +76,7 @@ $(document).ready(function() {
 
     if ($("#footer-post").length) {
         var lastScrollTop = 0;
-        $(window).on('scroll', function() {
+        $(window).on('scroll', function () {
             var topDistance = $(window).scrollTop();
 
             if (topDistance > lastScrollTop) {
