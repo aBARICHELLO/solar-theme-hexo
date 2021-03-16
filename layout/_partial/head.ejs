@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <%- open_graph({
         image:          thumbnail(page),
-        fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
-        fb_admins:      theme.miscellaneous.open_graph.fb_admins,
-        twitter_id:     theme.miscellaneous.open_graph.twitter_id,
-        google_plus:    theme.miscellaneous.open_graph.google_plus,
     }) %>
     <%- meta(page) %>
     <% if (theme.customize.favicon) { %>
@@ -51,4 +47,5 @@
     <% } %>
     <!-- jquery -->
     <%- js('lib/jquery/jquery.min') %>
+    <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" src="https://log.arbochelli.me/umami.js"></script>
 </head>
