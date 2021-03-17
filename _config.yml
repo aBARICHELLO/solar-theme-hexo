@@ -31,8 +31,7 @@ rss: false
 
 # Plugins
 plugins:
-    disqus_shortname: # Disqus Comments Shortname
-    google_analytics: # enter the tracking ID for your Google Analytics
+    disqus_shortname:
 
 # Miscellaneous
 miscellaneous:
