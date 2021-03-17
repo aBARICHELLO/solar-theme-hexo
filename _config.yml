@@ -15,8 +15,7 @@ customize:
     post_count: 5
     highlight: railscasts
 
-# keept it like this to add the root path (probably a bug)
-root: ..
+root: /blog/
 
 # RSS
 rss: false
