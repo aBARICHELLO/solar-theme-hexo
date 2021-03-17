@@ -1,3 +1,9 @@
+<h2>Categories:</h2>
+<%- list_categories(site.categories, { class: 'post-category', show_count: true, style: false, separator: "<br>", transform(str) { return str + "</a> | " } }) %>
+
+<h2>Tags:</h2>
+<%- list_tags(site.tags, {class: 'post-tag', style: false, separator: "<br>", transform(str) { return str + "</a> | " } }) %>
+
 <h1>Posts</h1>
 <ul class="post-list">
   <% page.posts.sort('date', 'desc').each(function(post) { %>
@@ -7,9 +13,3 @@
     </li>
   <% }); %>
 </ul>
-
-<h2>Categories:</h2>
-<%- list_categories(site.categories, { class: 'post-category', show_count: true, style: false, separator: "<br>", transform(str) { return str + "</a> | " } }) %>
-
-<h2>Tags:</h2>
-<%- list_tags(site.tags, {class: 'post-tag', style: false, separator: "<br>", transform(str) { return str + "</a> | " } }) %>
