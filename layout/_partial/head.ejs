@@ -1,11 +1,20 @@
 <head>
-    <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="/static/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="apple-touch-icon" sizes="60x60" href="/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+    <link rel="manifest" href="/static/site.webmanifest">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+
     <%- open_graph({
-        image:          thumbnail(page),
+        image: thumbnail(page),
     }) %>
     <%- meta(page) %>
     <% if (theme.customize.favicon) { %>
