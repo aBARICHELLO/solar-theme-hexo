@@ -23,7 +23,7 @@ rss: false
 
 # Plugins
 plugins:
-    disqus_shortname:
+    uterrances: true
 
 # Miscellaneous
 miscellaneous:
