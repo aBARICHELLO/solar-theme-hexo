@@ -12,9 +12,7 @@ $(window).load(function () {
     $("#wrapper").fadeTo("slow", 1);
 });
 
-$(document).ready(function () {
-
-
+jQuery(function () {
     $(window).on('scroll', function () {
 
         var z = $(".banner")[0].getBoundingClientRect().bottom / (
