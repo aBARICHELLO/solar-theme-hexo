@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Posts</th>
+  </tr>
+  <% fn(site_data.sort('length', 'desc').each(function(data) { %>
+    <tr>
+      <td><a href="<%= url_prefix + data.name + "/" %>"><%= data.name %></a></td>
+      <td><%- ` | ${data.length}` %><br></td>
+    </tr>
+  <% })); %>
+</table>

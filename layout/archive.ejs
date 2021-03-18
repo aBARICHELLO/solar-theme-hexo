@@ -1,8 +1,8 @@
 <h2>Categories:</h2>
-<%- list_categories(site.categories, { class: "post-category", show_count: true, style: false, separator: "<br>", transform(str) { return str + "</a> | " } }) %>
+<%- partial("_partial/post/archive-table", { fn: list_categories, site_data: site.categories, url_prefix: "/blog/categories/" }) %>
 
 <h2>Tags:</h2>
-<%- list_tags(site.tags, {class: "post-tag", style: false, separator: "<br>", transform(str) { return str + "</a> | " } }) %>
+<%- partial("_partial/post/archive-table", { fn: list_tags, site_data: site.tags, url_prefix: "/blog/tags/" }) %>
 
 <h1>Posts</h1>
 <ul class="post-list">
