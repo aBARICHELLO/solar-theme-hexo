@@ -5,7 +5,7 @@
 *     <%- meta(post) %>
 */
 function trim (str) {
-    return str.trim().replace(/^"(.*)"$/, '$1').replace(/^'(.*)'$/, '$1');
+    return str.trim().replace(/^"(.*)"$/, "$1").replace(/^"(.*)"$/, "$1");
 }
 
 function split (str, sep) {
@@ -17,9 +17,8 @@ function split (str, sep) {
     return result;
 }
 
-hexo.extend.helper.register('meta', function (post) {
+hexo.extend.helper.register("meta", function (post) {
     var metas = post.meta || [];
-    var output = '';
     var metaDOMArray = metas.map(function (meta) {
         var entities = split(meta, /(?:[^\\;]+|\\.)+/g);
         var entityArray = entities.map(function (entity) {
@@ -33,7 +32,7 @@ hexo.extend.helper.register('meta', function (post) {
         }).filter(function (entity) {
             return entity;
         });
-        return '<meta ' + entityArray.join(' ') + ' />';
+        return "<meta " + entityArray.join(" ") + " />";
     });
-    return metaDOMArray.join('\n');
+    return metaDOMArray.join("\n");
 });

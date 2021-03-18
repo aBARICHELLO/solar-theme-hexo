@@ -2,9 +2,9 @@ if (!!$.prototype.justifiedGallery) { // if justifiedGallery method is defined
     var options = {
         rowHeight: 140,
         margins: 4,
-        lastRow: 'justify'
+        lastRow: "justify"
     };
-    $('.article-gallery').justifiedGallery(options);
+    $(".article-gallery").justifiedGallery(options);
 }
 
 
@@ -13,7 +13,7 @@ $(window).load(function () {
 });
 
 jQuery(function () {
-    $(window).on('scroll', function () {
+    $(window).on("scroll", function () {
 
         var z = $(".banner")[0].getBoundingClientRect().bottom / (
             $(".banner")[0].getBoundingClientRect().bottom - $(".banner")[0].getBoundingClientRect().top)
@@ -28,17 +28,17 @@ jQuery(function () {
     });
 
     $("#menu-icon, #menu-icon-tablet").click(function () {
-        if ($('#menu').css('visibility') == 'hidden') {
-            $('#menu').css('visibility', 'visible');
-            $('#menu-icon, #menu-icon-tablet').addClass('active');
+        if ($("#menu").css("visibility") == "hidden") {
+            $("#menu").css("visibility", "visible");
+            $("#menu-icon, #menu-icon-tablet").addClass("active");
 
             var topDistance = $("#menu > #nav").offset().top;
 
             $("#menu > #nav").show();
             return false;
         } else {
-            $('#menu').css('visibility', 'hidden');
-            $('#menu-icon, #menu-icon-tablet').removeClass('active');
+            $("#menu").css("visibility", "hidden");
+            $("#menu-icon, #menu-icon-tablet").removeClass("active");
 
             return false;
         }
@@ -50,12 +50,12 @@ jQuery(function () {
     });
 
     if ($("#menu").length) {
-        $(window).on('scroll', function () {
+        $(window).on("scroll", function () {
             var topDistance = $(window).scrollTop();
 
-            if ($('#menu').css('visibility') != 'hidden' && topDistance < 10) {
+            if ($("#menu").css("visibility") != "hidden" && topDistance < 10) {
                 $("#menu > #nav").show();
-            } else if ($('#menu').css('visibility') != 'hidden' && topDistance > 10) {
+            } else if ($("#menu").css("visibility") != "hidden" && topDistance > 10) {
                 $("#menu > #nav").hide();
             }
 
@@ -73,7 +73,7 @@ jQuery(function () {
 
     if ($("#footer-post").length) {
         var lastScrollTop = 0;
-        $(window).on('scroll', function () {
+        $(window).on("scroll", function () {
             var topDistance = $(window).scrollTop();
 
             if (topDistance > lastScrollTop) {
