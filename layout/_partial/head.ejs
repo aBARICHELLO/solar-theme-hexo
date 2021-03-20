@@ -22,7 +22,6 @@
 
     <%- css('lib/font-awesome/css/font-awesome.min') %>
     <%- css('lib/meslo-LG/styles') %>
-    <%- css('lib/justified-gallery/justifiedGallery.min.css') %>
     <%- css('css/style') %>
 
     <% if (theme.rss === '' && config.feed && config.feed.path) { %>
@@ -32,8 +31,7 @@
         <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
         <% } %>
 
-    <%- js('lib/jquery/jquery.min') %>
-    <%- js('js/main') %>
+    <%- js('hx/main') %>
     <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.me" src="https://log.arbochelli.me/umami.js"></script>
     <script async defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="arbochelli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </head>
