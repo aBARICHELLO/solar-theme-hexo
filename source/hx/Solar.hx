@@ -21,17 +21,19 @@ function onscroll() {
     var menuIcon = document.querySelector("#menu-icon");
     var menuIconTablet = document.querySelector("#menu-icon-tablet");
     var topDistance = window.scrollY;
-    if (menu.style.visibility != "hidden" && topDistance < 10) {
-        document.querySelector("#menu > #nav").style.display = "block";
-    } else if (document.querySelector("#menu").style.visibility != "hidden" && topDistance > 10) {
-        document.querySelector("#menu > #nav").style.display = "none";
-    }
-    if (menuIcon.style.visibility == "hidden" && topDistance < 10) {
-        menuIconTablet.style.display = "block";
-        document.querySelector("#top-icon-tablet").style.display = "none";
-    } else if (menuIcon.style.visibility == "hidden" && topDistance > 10) {
-        menuIconTablet.style.display = "none";
-        document.querySelector("#top-icon-tablet").style.display = "block";
+    if (menu != null) {
+        if (menu.style.visibility != "hidden" && topDistance < 10) {
+            document.querySelector("#menu > #nav").style.display = "block";
+        } else if (document.querySelector("#menu").style.visibility != "hidden" && topDistance > 10) {
+            document.querySelector("#menu > #nav").style.display = "none";
+        }
+        if (menuIcon.style.visibility == "hidden" && topDistance < 10) {
+            menuIconTablet.style.display = "block";
+            document.querySelector("#top-icon-tablet").style.display = "none";
+        } else if (menuIcon.style.visibility == "hidden" && topDistance > 10) {
+            menuIconTablet.style.display = "none";
+            document.querySelector("#top-icon-tablet").style.display = "block";
+        }
     }
 
     //
