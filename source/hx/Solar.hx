@@ -12,15 +12,15 @@ function onscroll() {
         z = 0.001;
     }
 
-    var wrapper = document.querySelector("#wrapper");
+    final wrapper = document.querySelector("#wrapper");
     wrapper.style.setProperty("transform", 'scale(${z})');
 
     //
 
-    var menu = document.querySelector("#menu");
-    var menuIcon = document.querySelector("#menu-icon");
-    var menuIconTablet = document.querySelector("#menu-icon-tablet");
-    var topDistance = window.scrollY;
+    final menu = document.querySelector("#menu");
+    final menuIcon = document.querySelector("#menu-icon");
+    final menuIconTablet = document.querySelector("#menu-icon-tablet");
+    final topDistance = window.scrollY;
     if (menu != null) {
         if (menu.style.visibility != "hidden" && topDistance < 10) {
             document.querySelector("#menu > #nav").style.display = "block";
@@ -40,7 +40,7 @@ function onscroll() {
 
     if (document.querySelector("#footer-post") != null) {
         var lastScrollTop = 0.0;
-        var topDistance = window.scrollY;
+        final topDistance = window.scrollY;
         if (topDistance > lastScrollTop) {
             document.querySelector("#footer-post").style.display = "none";
         } else {
@@ -61,17 +61,17 @@ function onscroll() {
 }
 
 function onready() {
-    var menu = document.querySelector("#menu");
-    var menuIcon = document.querySelector("#menu-icon");
-    var menuIconTablet = document.querySelector("#menu-icon-tablet");
-    var items = [
+    final menu = document.querySelector("#menu");
+    final menuIcon = document.querySelector("#menu-icon");
+    final menuIconTablet = document.querySelector("#menu-icon-tablet");
+    final items = [
         menuIcon,
         menuIconTablet
     ];
     if (menuIcon != null && menuIconTablet != null) {
         for (el in items) {
             el.onclick = () -> {
-                var menunav = document.querySelector("#menu > #nav");
+                final menunav = document.querySelector("#menu > #nav");
                 if (menu.style.visibility == "hidden") {
                     menu.style.visibility = "visible";
                     el.classList.add("active");
