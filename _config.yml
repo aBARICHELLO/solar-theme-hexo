@@ -1,5 +1,5 @@
 nav:
-  Home: /
+  Home: /index.html
   Sheet Music: https://arbochelli.me/
   Posts: /posts/
   Donate: /donate/
@@ -12,7 +12,7 @@ customize:
         width: 50
         height: 50
         url: /static/favicon.png
-    post_count: 5
+    post_count: 10
     highlight: railscasts
 
 root: /blog/
