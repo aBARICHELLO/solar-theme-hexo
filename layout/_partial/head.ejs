@@ -1,35 +1,35 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="msapplication-TileColor" content="#00aba9">
-    <meta name="msapplication-config" content="/static/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="<%=
-      (is_post() && !is_archive()) ? page.content.match(/<p>.+<\/p>/)[0].slice(3, -4) : config.description
-    %>" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="/static/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="<%=
+    (is_post() && !is_archive()) ? page.content.match(/<p>.+<\/p>/)[0].slice(3, -4) : config.description
+  %>" />
 
-    <link rel="apple-touch-icon" sizes="60x60" href="/static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="manifest" href="/static/site.webmanifest">
-    <link rel="shortcut icon" href="/static/favicon.ico">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link rel="manifest" href="/static/site.webmanifest">
+  <link rel="shortcut icon" href="/static/favicon.ico">
 
-    <title><%= is_post() ? page.title + " | " + config.title : config.title %></title>
+  <title><%= is_post() ? page.title + " | " + config.title : config.title %></title>
 
-    <%- css('lib/font-awesome/css/font-awesome.min') %>
-    <%- css('lib/meslo-LG/styles') %>
-    <%- css('css/style') %>
+  <%- css('lib/font-awesome/css/font-awesome.min') %>
+  <%- css('lib/meslo-LG/styles') %>
+  <%- css('css/style') %>
 
-    <% if (theme.rss === '' && config.feed && config.feed.path) { %>
-      <% theme.rss = config.feed.path %>
-      <% } %>
-      <% if (theme.rss) { %>
-        <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
-        <% } %>
+  <% if (theme.rss === '' && config.feed && config.feed.path) { %>
+    <% theme.rss = config.feed.path %>
+    <% } %>
+    <% if (theme.rss) { %>
+      <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
+    <% } %>
 
-    <%- js('hx/main') %>
-    <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.me" src="https://log.arbochelli.me/umami.js"></script>
-    <script async defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="arbochelli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  <%- js('hx/main') %>
+  <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.me" src="https://log.arbochelli.me/umami.js"></script>
+  <script async defer data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="arbochelli" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FFDD00" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </head>
