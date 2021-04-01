@@ -6,6 +6,9 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="/static/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="<%=
+      (is_post() && !is_archive()) ? page.content.match(/<p>.+<\/p>/)[0].slice(3, -4) : config.description
+    %>" />
 
     <link rel="apple-touch-icon" sizes="60x60" href="/static/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
@@ -13,12 +16,7 @@
     <link rel="manifest" href="/static/site.webmanifest">
     <link rel="shortcut icon" href="/static/favicon.ico">
 
-    <%- open_graph({
-        image: thumbnail(page),
-    }) %>
-    <%- meta(page) %>
-
-    <title><%= is_post() ? page.title + " - " + config.title : config.title %></title>
+    <title><%= is_post() ? page.title + " | " + config.title : config.title %></title>
 
     <%- css('lib/font-awesome/css/font-awesome.min') %>
     <%- css('lib/meslo-LG/styles') %>
