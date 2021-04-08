@@ -9,23 +9,23 @@
   <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLU2kEGm75X3CZ4-gMikR6LZ24B1fO3so_" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </section>
 
+<section id="posts">
+  <span class="h1"><a href="<%- url_for('posts') %>">Recent blog posts</a></span>
+  <ul class="post-list">
+    <% site.posts.sort('date', 'desc' ).limit(theme.customize.post_count || 7).each(function(post, i){ %>
+      <li class="post-item">
+        <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
+        <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+      </li>
+    <% }); %>
+  </ul>
+</section>
+
 <section id="social-links">
   <span class="h1"><a href="<%- url_for('sheet-music') %>">Social Links</a></span>
   <ul>
     <li><a href="https://yt.arbochelli.me">Youtube</a></li>
     <li><a href="https://ms.arbochelli.me">MuseScore</a></li>
     <li><a href="https://github.com/abarichello/arbochelli">GitHub</a></li>
-  </ul>
-</section>
-
-<section id="posts">
-  <span class="h1"><a href="<%- url_for('posts') %>">Recent blog posts</a></span>
-  <ul class="post-list">
-      <% site.posts.sort('date', 'desc' ).limit(theme.customize.post_count || 7).each(function(post, i){ %>
-      <li class="post-item">
-        <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
-          <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
-      </li>
-      <% }); %>
   </ul>
 </section>
