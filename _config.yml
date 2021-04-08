@@ -11,7 +11,7 @@ customize:
         enabled: true
         width: 50
         height: 50
-        url: /static/favicon.png
+        url: /static/favicon/favicon.png
     post_count: 10
     highlight: railscasts
 
