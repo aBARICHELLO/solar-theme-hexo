@@ -5,8 +5,16 @@
 </section>
 
 <section id="videos">
-  <span class="h1">Videos</span>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLU2kEGm75X3CZ4-gMikR6LZ24B1fO3so_" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <span class="h1"><a href="https://www.youtube.com/playlist?list=PLU2kEGm75X3CZ4-gMikR6LZ24B1fO3so_">Videos</a></span>
+  <iframe width="560"
+    height="315"
+    src="https://www.youtube.com/embed/videoseries?list=PLU2kEGm75X3CZ4-gMikR6LZ24B1fO3so_"
+    title="Playlist"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe><br>
+  <a href="https://www.youtube.com/playlist?list=PLU2kEGm75X3CZ4-gMikR6LZ24B1fO3so_" class="umami--click--playlist">Click here for the full playlist</a>
 </section>
 
 <section id="posts">
@@ -24,9 +32,9 @@
 <section id="links">
   <span class="h1"><a href="<%- url_for('sheet-music') %>">Links</a></span>
   <ul>
-    <li><a href="https://yt.arbochelli.me">Youtube</a></li>
-    <li><a href="https://ms.arbochelli.me">MuseScore</a></li>
-    <li><a href="https://github.com/abarichello/arbochelli">GitHub</a></li>
+    <li><a href="https://yt.arbochelli.me" class="umami--click--youtube">Youtube</a></li>
+    <li><a href="https://ms.arbochelli.me" class="umami--click--musescore">MuseScore</a></li>
+    <li><a href="https://github.com/abarichello/arbochelli" class="umami--click--github">GitHub</a></li>
     <li><a href="https://www.halleonard.com/bin/musicNotationBass.pdf">Notation guide</a></li>
   </ul>
 </section>
