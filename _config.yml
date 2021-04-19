@@ -5,25 +5,19 @@ nav:
   Donate: /donate/
 
 customize:
-    gravatar:
-        email:
-    logo:
-        enabled: true
-        width: 50
-        height: 50
-        url: /static/favicon/favicon.png
-    post_count: 10
-    highlight: railscasts
+  gravatar:
+    email:
+  logo:
+    enabled: true
+    width: 50
+    height: 50
+    url: /static/favicon/favicon.png
+  post_count: 10
+  highlight: railscasts
 
 root: /blog/
 
-# RSS
 rss: false
 
-# Plugins
 plugins:
-    utterances: true
-
-# Miscellaneous
-miscellaneous:
-    open_graph: # see http://ogp.me
+  utterances: true

@@ -1,10 +1,10 @@
-<% if(page.comments && theme.plugins.utterances){ %>
+<% if (theme.plugins.utterances && (page.comments || is_archive())) { %>
   <script src="https://utteranc.es/client.js"
-    repo="aBARICHELLO/arbochelli"
+    repo="abarichello/arbochelli"
     issue-term="pathname"
     theme="preferred-color-scheme"
     label="comment"
     crossorigin="anonymous"
     async>
-</script>
+  </script>
 <% } %>

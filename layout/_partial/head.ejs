@@ -28,10 +28,10 @@
 
   <% if (theme.rss === '' && config.feed && config.feed.path) { %>
     <% theme.rss = config.feed.path %>
-    <% } %>
-    <% if (theme.rss) { %>
-      <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
-    <% } %>
+  <% } %>
+  <% if (theme.rss) { %>
+    <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml" />
+  <% } %>
 
   <%- js('hx/main') %>
   <script async defer data-website-id="b485bc74-881e-4f53-a0e6-5ae113ff8e6e" data-domains="arbochelli.me" src="https://log.arbochelli.me/umami.js"></script>
